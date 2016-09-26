@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Star Wars Database</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+		
+		.container{
+			border: 3px black solid;
+			border-radius: 15px;
+			margin-top: 20px;
+			background: #29293d;
+						
+			/*background-color: lightgrey;*/
+		}
+
+		.table th {
+			color:#c2c2d6;
+		}
+
+		.table td {
+			color: white;
+		}
+		
+		
+
+		.search-element{
+			margin-bottom: 50px;
+		}
+
+		#gallery{
+			float:left;
+			padding: 10px;
+			margin-right: 10px;
+
+		}
+
+		#gallery img{
+			margin-right: 5px;
+			margin-bottom: 5px;
+
+		}
+
+		#beerQuery + span {
+			cursor: pointer;
+		}
+
+		.header {
+			color: white;
+		}
+
+		body {
+			background: black;
+		}
+
+		img {
+			border: 2px black solid;
+			margin: 5px;
+		}
+
+		.hid{
+			visibility:hidden;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<div class="container">
+		
+		<div class="row">
+			<h1 class="text-center header">STAR WARS</h1>
+			<h3 class="text-center header"> Search a galaxy far, far away</h3>
+		</div>
+		
+		<div class="row">
+			<form class="navbar-form">
+        	<div class="form-group" style="display:inline;">
+          		<div class="input-group">
+            		<input type="text" class="form-control" id="searchQuery" value="luke skywalker">
+            		<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          		</div>
+       		 </div>
+      		</form>
+      	<div>
+      		<table class="table table-hover">
+      		<thead>
+      		<th>People</th>
+      		<th>Gender</th>
+      		<th>Hair colour</th>
+      		<th>Eye colour</th>
+      		<th>Skin colour</th>
+      		<tbody id="search-results">
+      		</tbody>
+      		</table>
+      	</div>
+      	</div>
+      	<hr>
+
+<!-- Modal -->
+			<div class="modal fade" id="beer_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			      </div>
+			      <div class="modal-body" id=descTest>
+			       <table>
+			       <tbody>
+			       </tbody>
+			       </table>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Thanks!</button>
+			        
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+		<div class="row">
+			<div id="gallery"></div>
+		</div>
+
+	</div>
+
+<!-- 
+
+	..........End Content......
+
+	-->
+	<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="js/my_script.js"></script>
+
+		
+		
+
+
+
+
+		<!-- // $("#gallery").on('click', "img", function(event) {
+
+			
+		// 	var beerID = $(this).attr("value");
+		// 	var urlBeerMore = "https://quiet-inlet-67115.herokuapp.com/api/beer/"+ beerID;
+		// 	console.log(beerID);
+
+		// 	$.ajax({
+		// 		url: urlBeerMore,
+		// 		dataType: 'json',
+		// 	})
+
+		// 	.success(function( descBeer ) {
+		// 		var contentSelect = "";
+
+		// 		// console.log(descBeer);
+		// 		// console.log(elem.description);
+		// 		var bestEnjoyed = descBeer.available ? descBeer.available.name : "No info"
+
+		// 		contentSelect = '<tr value="' + descBeer.id + '"><td>'+descBeer.description+'</td><td>'+descBeer.abv+'</td><td>'+bestEnjoyed+'</td></tr>';
+		// 		$("#descTest tbody").html( contentSelect );
+		// 		$("table").removeClass("hid");
+		// 		$("#beer_modal").modal('show');
+				
+		// 		console.log(descBeer);
+		// 	});
+
+		// }); -->
+
+
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
