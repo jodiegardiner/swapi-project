@@ -1,0 +1,67 @@
+		
+		.container{
+			border: 3px black solid;
+			border-radius: 15px;
+			margin-top: 20px;
+			background: #1C1E22;
+						
+			/*background-color: #1C1E22;*/
+			/*background-color: #F5F5F5;*/
+		}
+
+		.table th {
+			color:#c2c2d6;
+		}
+
+		.table td {
+			color: #F5F5F5;
+		}
+		
+		tbody tr:hover {
+			background: #272B30;
+		}
+		
+
+		.search-element{
+			margin-bottom: 50px;
+		}
+
+		#gallery{
+			float:left;
+			padding: 10px;
+			margin-right: 10px;
+
+		}
+
+		#gallery img{
+			margin-right: 5px;
+			margin-bottom: 5px;
+
+		}
+
+		#beerQuery + span {
+			cursor: pointer;
+		}
+
+		.header {
+			color: #F5F5F5;
+		}
+
+		body {
+			background: #272B30;
+		}
+
+		img {
+			border: 2px black solid;
+			margin: 5px;
+		}
+
+		.hid{
+			visibility:hidden;
+		}
+
+		h1 strong{
+			margin-left: 10px;
+		}
+
+	

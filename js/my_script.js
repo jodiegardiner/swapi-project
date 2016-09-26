@@ -1,7 +1,11 @@
-$("#searchQuery + span").on('click', function(event) {
+// custom js for swapi-project stream 1
+
+// Search for People
+$("#searchQuery").on('keyup', function(event) {
 
 	event.preventDefault();
-	console.log("button was clicked");
+
+	$(".hidden").removeClass("hidden");
 
 	var nameSearch = $("#searchQuery").val();
 	var urlPeopleName = "https://swapi.co/api/people/?search=" + nameSearch;
