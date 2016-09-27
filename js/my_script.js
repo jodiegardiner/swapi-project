@@ -21,7 +21,7 @@ $("#searchQuery").on('keyup', function(event) {
 
 		$.each(searchItem.results, function(i, sData){
 			
-		searchOutput += '<tr data-toggle="modal" data-target="#sw_modal" id="'+sData.url+'"><td>' + sData.name + '</td><td>' + sData.gender + '</td><td>' + sData.hair_color + '</td><td>' + sData.eye_color + '</td><td>' + searchItem.results[0].skin_color + '</td></tr>';
+		searchOutput += '<tr data-toggle="modal" data-target="#sw_modal" id="'+sData.url+'"><td>' + sData.name + '</td><td>' + sData.gender + '</td><td>' + sData.hair_color + '</td><td>' + sData.eye_color + '</td><td>' + sData.skin_color + '</td></tr>';
 		})		
 
 
@@ -92,7 +92,6 @@ $("#search-results").on('click', "tr", function(event){
 					dataType: 'json',
 				})
 				.success(function( shipName) {
-					console.log(shipName.name);
 					
 					shipList+= shipName.name+' ';
 					console.log(shipList);
@@ -113,8 +112,7 @@ $("#search-results").on('click', "tr", function(event){
 					dataType: 'json',
 				})
 				.success(function( vehName) {
-					console.log(vehName.name);
-					
+										
 					vehList+= vehName.name+' ';
 					console.log(vehList);
 					$("#veh-list").html(vehList);
@@ -129,7 +127,3 @@ $("#search-results").on('click', "tr", function(event){
 	});
 })
 
-$("#srch-btn").on('click', function(event){
-
-	event.preventDefault();
-})

@@ -16,28 +16,35 @@
 <body>
 
 
-	<div class="container">
+	<div class="container" id="main-container">
 		
 		<div class="row">
-			<h1 class="text-center header"><strong>STAR QUERY</strong></h1>
-			<h3 class="text-center header"> Search a galaxy far, far away</h3>
+			<div class="col-md-8">
+				<a href="index.html"><span class="fa fa-rebel fa-4x"></span><span class=" header main-header"><strong>&nbsp;Star query&nbsp;</strong></span><span class="fa fa-first-order fa-4x"></span></a>
+			</div>
+
+			<div class="col-md-4">
+			
+			</div>
 		</div>
+		
+		<div class="container ctn">
 		<div class="row">
 			<h1 class="header "><strong>People Search</strong></h1>
 			</div>
-
-      		
-		<div class="col-md-3">
+</div>
+      	<div class="row">
+		<div class="col-md-12">
 		  
-		  <form class="navbar-form" role="search">
-		    <div class="input-group add-on">
+		  <div class="form-group">
+		    
 		      <input type="text" class="form-control" placeholder="Find people" name="srch-term" id="searchQuery">
-		      <div class="input-group-btn">
-		        <button class="btn btn-default" type="submit" id="srch-btn"><i class="glyphicon glyphicon-search"></i></button>
-		      </div>
+		      <span class=" header sub-header"><p> <strong>Search a galaxy far, far away</strong></p></span>
+		      
 		    </div>
-		  </form> 
+		  </div> 
 		</div>
+		
 
       		<div>
 	      		<table class="table hidden">
@@ -51,8 +58,10 @@
 	      		</tbody>
 	      		</table>
       		</div>
+      		</div>
       	</div>
-      	<hr>
+
+      
 
 
 <!-- Button trigger modal -->
@@ -100,11 +109,14 @@
 			  </div>
 			</div>
 
-
-		<!-- <div class="row">
-			<div id="gallery"></div>
-		</div> -->
-
+		 <footer class="footer">
+		    <div class="container">
+		    <div class="row">
+		    	<div class="text-muted col-md-12"><span>Built using the <a href="https://swapi.co/">SWAPI</a></span>. <span class="foot-right">Star Wars is ™ and &copy Disney 2013</span></div>
+		    	<div class="text-muted col-md-6"></div>
+		    </div>
+		    </div>
+		  </footer>
 	</div>
 
 <!-- 
