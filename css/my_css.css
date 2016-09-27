@@ -1,6 +1,6 @@
 		
 		.container{
-			border: 3px black solid;
+			border: 3px grey solid;
 			border-radius: 15px;
 			margin-top: 20px;
 			background: #1C1E22;
@@ -43,14 +43,14 @@
 			cursor: pointer;
 		}
 
-		.header {
+		/*.header {
 			color: #F5F5F5;
-		}
+		}*/
 
-		body {
+		/*body {
 			background: #272B30;
 		}
-
+*/
 		img {
 			border: 2px black solid;
 			margin: 5px;
@@ -63,5 +63,19 @@
 		h1 strong{
 			margin-left: 10px;
 		}
+		
+		.fa-mars{
+			color:lightblue;
+		}
+		
+		.fa-venus{
+			color:pink;
+		}
 
-	
+		.fa-mercury{
+			color:goldenrod;
+		}
+
+		.modal-header h1{
+			display:inline;
+		}

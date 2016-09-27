@@ -44,13 +44,27 @@ $("#search-results").on('click', "tr", function(event){
 	.success(function( personDetail ) {
 		var personOutput = "";
 		console.log(personDetail);
+		var genderIcon;
+
+		if (personDetail.gender == "male"){
+			genderIcon="<i class='fa fa-mars fa-3x'></i>"
+		}	else if (personDetail.gender == "female"){
+			genderIcon="<i class='fa fa-venus fa-3x'></i>"
+		}	else if (personDetail.gender =="n/a"){
+			genderIcon="<i class='fa fa-ban fa-3x'></i>"
+		}	else if (personDetail.gender =="hermaphrodite"){
+			genderIcon="<i class='fa fa-mercury fa-3x'></i>"
+		}	else {
+			genderIcon=""			
+		};
 		
 
 		$("#peopleModalLabel").html(personDetail.name);
 		$("#peopleHeight").html(personDetail.height);
 		$("#peopleWeight").html(personDetail.mass);
 		$("#peopleHair").html(personDetail.hair_color);
-		$("#peopleEyes").html(personDetail.eye_color);
+		$("#peopleEyes").html(personDetail.eye_color).css("color", personDetail.eye_color);
+		$("#genderIco").html("     "+genderIcon);
 
 
 
