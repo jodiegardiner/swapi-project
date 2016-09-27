@@ -32,8 +32,11 @@ $("#searchQuery").on('keyup', function(event) {
 // Return specific person, format for modal
 $("#search-results").on('click', "tr", function(event){
 
+	// empty out old data on every fresh click
+	$("#ship-list").html("");
+	$("#veh-list").html("");
+
 	var urlID = $(this).attr('id');
-	console.log(urlID);
 
 	$.ajax({
 		url: urlID,
@@ -43,8 +46,10 @@ $("#search-results").on('click', "tr", function(event){
 
 	.success(function( personDetail ) {
 		var personOutput = "";
-		console.log(personDetail);
 		var genderIcon;
+		var planetName = personDetail.homeworld;
+		var starships = personDetail.starships;
+		
 
 		if (personDetail.gender == "male"){
 			genderIcon="<i class='fa fa-mars fa-3x'></i>"
@@ -67,6 +72,64 @@ $("#search-results").on('click', "tr", function(event){
 		$("#genderIco").html("     "+genderIcon);
 
 
+		$.ajax({
+			url: planetName,
+			dataType: 'json',
+		})
+
+		.success(function( homeWorld) {
+			$("#peopleWorld").html(homeWorld.name)
+		})
+
+		
+		var shipList='';
+
+		$.each(personDetail.starships, function(i, shipData){
+					
+				
+				$.ajax({
+					url: shipData,
+					dataType: 'json',
+				})
+				.success(function( shipName) {
+					console.log(shipName.name);
+					
+					shipList+= shipName.name+' ';
+					console.log(shipList);
+					$("#ship-list").html(shipList);
+					
+					})
+				
+
+		})
+
+		var vehList='';
+
+		$.each(personDetail.vehicles, function(i, vehData){
+					
+				
+				$.ajax({
+					url: vehData,
+					dataType: 'json',
+				})
+				.success(function( vehName) {
+					console.log(vehName.name);
+					
+					vehList+= vehName.name+' ';
+					console.log(vehList);
+					$("#veh-list").html(vehList);
+					
+					})
+				
+
+		})
+		
+
 
 	});
+})
+
+$("#srch-btn").on('click', function(event){
+
+	event.preventDefault();
 })

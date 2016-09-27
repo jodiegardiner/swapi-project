@@ -25,15 +25,20 @@
 		<div class="row">
 			<h1 class="header "><strong>People Search</strong></h1>
 			</div>
-		<div class="row">
-			<form class="navbar-form">
-        	<div class="form-group" style="display:inline;">
-          		<div class="input-group">
-            		<input type="text" class="form-control" id="searchQuery" value="">
-            		<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-          		</div>
-       		 </div>
-      		</form>
+
+      		
+		<div class="col-md-3">
+		  
+		  <form class="navbar-form" role="search">
+		    <div class="input-group add-on">
+		      <input type="text" class="form-control" placeholder="Find people" name="srch-term" id="searchQuery">
+		      <div class="input-group-btn">
+		        <button class="btn btn-default" type="submit" id="srch-btn"><i class="glyphicon glyphicon-search"></i></button>
+		      </div>
+		    </div>
+		  </form> 
+		</div>
+
       		<div>
 	      		<table class="table hidden">
 	      		<thead>
@@ -70,11 +75,23 @@
 			      		<div class="col-md-3">Hair: <span id="peopleHair"></span></div>
 			      		<div class="col-md-3">Eyes: <span id="peopleEyes"></span></div>
 			      	</div>
+			      	<hr>
 			      	<div class="row">
+			      		<div class="col-md-12">Homeworld: <span id="peopleWorld"></span></div>
+			      	</div>
+			      	<hr>
+			      	<div class="row">
+			      		<div class="col-md-6">Starships used: <span id="ship-list"></span></div>
+			      		<div class="col-md-6">Vehicles used: <span id="veh-list"></span></div>
 			      		
+			      	</div>
+			      	<hr>
+			      	<div class="row">
+			      		<div class="col-md-12">Appears in:</div>
 			      	</div>
 			       
 			      </div>
+
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
 			        

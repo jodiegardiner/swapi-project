@@ -19,6 +19,7 @@
 		
 		tbody tr:hover {
 			background: #272B30;
+			cursor: pointer;
 		}
 		
 
@@ -75,7 +76,14 @@
 		.fa-mercury{
 			color:goldenrod;
 		}
+		.fa-ban{
+			color:red;
+		}
 
 		.modal-header h1{
 			display:inline;
+		}
+
+		#genderIco {
+			float:right;
 		}
