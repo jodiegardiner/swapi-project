@@ -75,7 +75,7 @@
 		}
 		
 		.fa-mars{
-			color:lightblue;
+			color:#6DCAE8;
 		}
 		
 		.fa-venus{
@@ -146,49 +146,76 @@
 		}
 
 		body{
-			background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e1/11/5a/e1115afea56dcaf0c273a4f3d9fc7f3a.jpg)
-		}
+			/*background-image: url(../img/starfield.jpg);*/
+			background-image: url(https://www.docwallpaper.com/wp-content/uploads/2016/07/Star-Wars-Stars-Spaceship-1024x768.jpg);
+
+			/*background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e1/11/5a/e1115afea56dcaf0c273a4f3d9fc7f3a.jpg)*/
+		}	
 
 		#btn-container {
-			    border: 3px grey solid;
-    			border-bottom-left-radius: 2px;
-    			border-bottom-right-radius: 2px;
-    			border-top-left-radius: 2px;
-    			border-top-right-radius: 2px;
-    			margin-top: 3px;
-    			background: #1C1E22;
-    			margin-right: auto;
-    			margin-left: auto;
-    			padding-left: 15px;
-    			padding-right: 15px;
-    			padding-top: 10px;
-    			padding-bottom: 10px;
+			border: 3px grey solid;
+    		border-bottom-left-radius: 2px;
+    		border-bottom-right-radius: 2px;
+    		border-top-left-radius: 2px;
+    		border-top-right-radius: 2px;
+    		margin-top: 3px;
+    		background: #1C1E22;
+    		margin-right: auto;
+    		margin-left: auto;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		padding-top: 10px;
+    		padding-bottom: 10px;
 		}
 
 		footer #foot-container {
-				border: 3px grey solid;
-    			border-bottom-left-radius: 10px;
-    			border-bottom-right-radius: 50px;
-    			border-top-left-radius: 2px;
-    			border-top-right-radius: 2px;
-    			margin-top: 3px;
-    			background: #1C1E22;
-    			margin-right: auto;
-    			margin-left: auto;
-    			padding-left: 15px;
-    			padding-right: 15px;
-    			padding-top: 5px;
-    			padding-bottom: 5px;
+			border: 3px grey solid;
+    		border-bottom-left-radius: 10px;
+    		border-bottom-right-radius: 50px;
+    		border-top-left-radius: 2px;
+    		border-top-right-radius: 2px;
+    		margin-top: 3px;
+    		background: #1C1E22;
+    		margin-right: auto;
+    		margin-left: auto;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		padding-top: 5px;
+    		padding-bottom: 5px;
 		}
 		
-		.img-store {
-			height: 150px
-			width: 200px;
+		.img-store img{
+			
+			box-shadow: 5px 5px 5px #000000;
 		}
 		.img-store1 {
-			border-bottom-left-radius: 10px;
-    			border-bottom-right-radius: 500px;
-    			border-top-left-radius: 2px;
-    			border-top-right-radius: 2px;
+			border-bottom-left-radius: 2px;
+    		border-bottom-right-radius: 2px;
+    		border-top-left-radius: 2px;
+    		border-top-right-radius: 2px;
     			/*background-image: url(../img/chars_text.jpg)*/
+		}
+
+		/*img:hover {
+			box-shadow: -10px -10px 5px #000000;
+		}*/
+
+		.modal-layout {
+			border: 2px solid grey;
+			border-radius: : 20px
+			box-shadow: 5px 5px 10px #1C1E22;
+			padding: 5px;
+			margin-top: 5px;
+			margin-left: 10px
+			margin-right: 10px;
+
+		}
+		.sub {
+			margin-left: 10px;
+		}
+
+		.appears img {
+			height:150px;
+			width:100px;
+			float: left;
 		}

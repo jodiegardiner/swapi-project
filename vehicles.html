@@ -31,7 +31,7 @@
 		
 		<div class="container ctn">
 		<div class="row">
-			<h1 class="header "><strong>People Search</strong></h1>
+			<h1 class="header "><strong>Vehicle Search</strong></h1>
 			</div>
 </div>
       	<div class="row">
@@ -39,7 +39,7 @@
 		  
 		  <div class="form-group">
 		    
-		      <input type="text" class="form-control" placeholder="Find people" name="srch-term" id="searchQuery">
+		      <input type="text" class="form-control" placeholder="Find a vehicle" name="srch-term" id="search-vehicle">
 		      <span class=" header sub-header"><p> <strong>Search a galaxy far, far away</strong></p></span>
 		      
 		    </div>
@@ -50,12 +50,11 @@
       		<div>
 	      		<table class="table hidden">
 	      		<thead>
-	      		<th>People</th>
-	      		<th>Gender</th>
-	      		<th>Hair colour</th>
-	      		<th>Eye colour</th>
-	      		<th>Skin colour</th>
-	      		<tbody id="search-results">
+	      		<th>Vehicle</th>
+	      		<th>Manufacturer</th>
+	      		<th>Crew</th>
+	      		<th>Passengers</th>	      		
+	      		<tbody id="vehicle-results">
 	      		</tbody>
 	      		</table>
       		</div>
@@ -71,7 +70,7 @@
 			</button> -->
 <!-- Modal -->
 		
-			<div class="modal fade" id="sw_modal" tabindex="-1" role="dialog" aria-labelledby="peopleModalLabel">
+			<div class="modal fade" id="veh_modal" tabindex="-1" role="dialog" aria-labelledby="peopleModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -79,45 +78,31 @@
 			        <h1 class="modal-title" id="peopleModalLabel"></h1><span id="genderIco"></span>
 			      </div>
 			      <div class="modal-body" id=peopleBody>
-			      	<div class="row modal-layout">
-			      		<div class="col-md-3 "><strong>Height</strong> <span id="peopleHeight"></span>cm</div>
+			      	<div class="row">
+			      		<div class="col-md-3"><strong>Height</strong> <span id="peopleHeight"></span>cm</div>
 			      		<div class="col-md-3"><strong>Weight</strong> <span id="peopleWeight"></span>kg</div>
 			      		<div class="col-md-3"><strong>Hair</strong> <span id="peopleHair"></span></div>
 			      		<div class="col-md-3"><strong>Eyes</strong> <span id="peopleEyes"></span></div>
 			      	</div>
-			      	
-			      	<div class="row modal-layout">
-			      		<div class="col-md-6"><strong>Homeworld</strong> <span id="peopleWorld"></span></div>
-			      		<div class="col-md-6"><strong>Birth Year</strong> <span id="peopleYear"></span></div>
+			      	<hr>
+			      	<div class="row">
+			      		<div class="col-md-12"><strong>Homeworld</strong> <span id="peopleWorld"></span></div>
 			      	</div>
-			      	
-			      	<div class="row modal-layout">
-			      		<div class="col-md-6"><strong>Starships used</strong>
-			      			<ul class="list-group" id="ship-list">
-			      		 	
-			      		 	</ul>
-			      		</div>
-
-
-			      		<div class="col-md-6"><strong>Vehicles used</strong>
-							<ul class="list-group" id="veh-list">
-								
-							</ul>
-			      		</div>
+			      	<hr>
+			      	<div class="row">
+			      		<div class="col-md-6"><strong>Starships used</strong>: <span id="ship-list"></span></div>
+			      		<div class="col-md-6"><strong>Vehicles used</strong>: <span id="veh-list"></span></div>
 			      		
 			      	</div>
-			      	
-			      	<div class="row modal-layout ">
-			      		<div class="col-md-12"><strong>Appears in</strong></div>
-			      	</div>
-			      	<div class="row modal-layout appears">
-			      		<div class="col-md-12"><span id="film-list"></span></div>
+			      	<hr>
+			      	<div class="row">
+			      		<div class="col-md-12"><strong>Appears in</strong>:</div>
 			      	</div>
 			       
 			      </div>
 
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">back</button>
+			        <button type="button" class="btn btn-default" data-dismiss="modal">click to dismiss</button>
 			        
 			      </div>
 			    </div>

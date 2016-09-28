@@ -70,6 +70,7 @@ $("#search-results").on('click', "tr", function(event){
 		$("#peopleHair").html(personDetail.hair_color);
 		$("#peopleEyes").html(personDetail.eye_color).css("color", personDetail.eye_color);
 		$("#genderIco").html("     "+genderIcon);
+		$("#peopleYear").html(personDetail.birth_year);
 
 
 		$.ajax({
@@ -93,8 +94,7 @@ $("#search-results").on('click', "tr", function(event){
 				})
 				.success(function( shipName) {
 					
-					shipList+= shipName.name+' ';
-					console.log(shipList);
+					shipList+= "<li class='list-group-item'>"+shipName.name+"</li>";
 					$("#ship-list").html(shipList);
 					
 					})
@@ -113,17 +113,102 @@ $("#search-results").on('click', "tr", function(event){
 				})
 				.success(function( vehName) {
 										
-					vehList+= vehName.name+' ';
-					console.log(vehList);
+					vehList+= "<li class='list-group-item'>"+vehName.name+"</li>";
 					$("#veh-list").html(vehList);
 					
 					})
 				
 
 		})
+
+
+
+		var appearsIn="";
+		for (var i=0; i<personDetail.films.length; i++) {
+			
+			
+			if (personDetail.films[i] == "http://swapi.co/api/films/1/") {
+				appearsIn=appearsIn+'<img title="A New Hope" class="img-responsive img-rounded" src="img/ep4.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/2/") {
+				appearsIn=appearsIn+'<img title="Empire Strikes Back" class="img-responsive img-rounded" src="img/ep5.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/3/") {
+				appearsIn=appearsIn+'<img title="Return of the Jedi" class="img-responsive img-rounded" src="img/ep6.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/4/") {
+				appearsIn=appearsIn+'<img title="The Phantom Menace" class="img-responsive img-rounded" src="img/ep1.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/5/") {
+				appearsIn=appearsIn+'<img title="Attack of the Clones" class="img-responsive img-rounded" src="img/ep2.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/6/") {
+				appearsIn=appearsIn+'<img title="Revenge of the Sith" class="img-responsive img-rounded" src="img/ep3.jpg">';
+			}
+			else if (personDetail.films[i] == "http://swapi.co/api/films/7/") {
+				appearsIn=appearsIn+'<img title="The Force Awakens" class="img-responsive img-rounded" src="img/ep7.jpg">';
+			}
+			else  {
+				console.log("shouldn't see me");
+			}
+			console.log(appearsIn);
+		};
+
+		$("#film-list").html(appearsIn);
+
+		// var filmList='';
+
+		// $.each(personDetail.films, function(i, filmData){
+					
+		// 		console.log(personDetail.films)
+		// 		$.ajax({
+		// 			url: filmData,
+		// 			dataType: 'json',
+		// 		})
+		// 		.success(function( filmName) {
+										
+		// 			filmList+= filmName.title+' ';
+		// 			console.log(filmList);
+		// 			$("#film-list").html(filmList);
+					
+		// 			})
+				
+
+		// })
 		
 
+	});
+})
 
+
+
+// Search for Vehicle name using user input
+
+$("#search-vehicle").on('keyup', function(event) {
+
+	event.preventDefault();
+
+	$(".hidden").removeClass("hidden");
+
+	var nameSearch = $("#search-vehicle").val();
+	var urlVehName = "https://swapi.co/api/vehicles/?search=" + nameSearch;
+
+	$.ajax({
+		url: urlVehName,
+		dataType: 'json',
+
+	})
+
+	.success(function( searchItem ) {
+		var searchOutput = "";
+
+		$.each(searchItem.results, function(i, sData){
+			
+		searchOutput += '<tr data-toggle="modal" data-target="#veh_modal" id="'+sData.url+'"><td>' + sData.name + '</td><td>' + sData.manufacturer + '</td><td>' + sData.crew + '</td><td>' + sData.passengers + '</td></tr>';
+		})		
+
+
+		$("#vehicle-results").html( searchOutput );
 	});
 })
 
