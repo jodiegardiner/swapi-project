@@ -21,7 +21,8 @@
 		
 		<div class="row">
 			<div class="col-md-12">
-				<a href="index.html"><span class="fa fa-rebel fa-4x"></span><span class=" header main-header"><strong>&nbsp;Star query&nbsp;</strong></span><span class="fa fa-first-order fa-4x"></span></a>
+				<!-- <a href="index.html"><span class="fa fa-rebel fa-4x"></span><span class=" header main-header"><strong>&nbsp;Star query&nbsp;</strong></span><span class="fa fa-first-order fa-4x"></span></a> -->
+				<a href="index.html"><img alt="Star Query" src="img/logo.png" class="img-responsive logo"></a>
 			</div>
 
 			<div class="col-md-4">
@@ -40,8 +41,7 @@
 		  <div class="form-group">
 		    
 		      <input type="text" class="form-control" placeholder="Find a vehicle" name="srch-term" id="search-vehicle">
-		      <span class=" header sub-header"><p> <strong>Search a galaxy far, far away</strong></p></span>
-		      
+		     
 		    </div>
 		  </div> 
 		</div>
@@ -53,7 +53,7 @@
 	      		<th>Vehicle</th>
 	      		<th>Manufacturer</th>
 	      		<th>Crew</th>
-	      		<th>Passengers</th>	      		
+	      		<th>Cost</th>	      		
 	      		<tbody id="vehicle-results">
 	      		</tbody>
 	      		</table>
@@ -76,42 +76,39 @@
 			      
 			      <div class="modal-body" id=vehicleBody>
 			      	<div class="row modal-layout">
-			      		<div class="col-md-12 "><strong>Manufacturer</strong>
-			      			<ul class="list-group" id="vehicleMaker"></ul></div>
+			      		<div class="col-md-9 "><strong>Manufacturer</strong>
+			      			<ul class="list-group" id="vehicleMaker"></ul>
 			      		</div>
+			      	
+			    
+			      		<div class="col-md-3 "><strong>Cost(credits)</strong>
+			      			<ul class="list-group" id="vehicleCost"></ul>
+			      		</div>
+			      		<div class="col-md-12 "><strong>Model</strong>
+			      			<ul class="list-group" id="vehicleModel"></ul>
+			      		</div>
+			      	</div>
 			      	<div class="row modal-layout">
 			      		<div class="col-md-3 "><strong>Crew</strong> <ul class="list-group" id="vehicleCrew"></ul></div>
 			      		<div class="col-md-3"><strong>Passengers</strong> <ul class="list-group" id="vehiclePass"></ul></div>
-			      		<div class="col-md-3"><strong>Hair</strong> <ul class="list-group" id="vehicleHair"></ul></div>
-			      		<div class="col-md-3"><strong>Eyes</strong> <ul class="list-group" id="vehicleEyes"></ul></div>
+			      		<div class="col-md-3"><strong>Max Speed(kph)</strong> <ul class="list-group" id="vehicleSpeed"></ul></div>
+			      		<div class="col-md-3"><strong>Length(m)</strong> <ul class="list-group" id="vehicleLength"></ul></div>
 			      	</div>
 			      	
 			      	<div class="row modal-layout">
-			      		<div class="col-md-6"><strong>Homeworld</strong> <ul class="list-group" id="vehicleWorld"></ul></div>
-			      		<div class="col-md-6"><strong>Birth Year</strong> <ul class="list-group" id="vehicleYear"></ul></div>
+			      		<div class="col-md-6"><strong>Cargo Capacity(kg)</strong> <ul class="list-group" id="vehicleCargo"></ul>
+			      		</div>
+			      		<div class="col-md-6"><strong>Consumables</strong> <ul class="list-group" id="vehicleCons"></ul>
+			      		</div>
 			      	</div>
 			      	
-			      	<div class="row modal-layout">
-			      		<div class="col-md-6">&nbsp;<span"><strong>&nbsp;Starships used&nbsp;</strong></span>
-			      			<ul class="list-group" id="ship-list">
-			      		 	
-			      		 	</ul>
-			      		</div>
-
-
-			      		<div class="col-md-6">&nbsp;<span class=""><strong>&nbsp;Vehicles used&nbsp;</strong></span>
-							<ul class="list-group" id="veh-list">
-								
-							</ul>
-			      		</div>
-			      		
-			      	</div>
+			      
 			      	
 			      	<div class="row modal-layout ">
-			      		<div class="col-md-12"><strong>Appears in</strong></div>
+			      		<div class="col-md-12"><strong>Seen in</strong></div>
 			      	</div>
 			      	<div class="row modal-layout appears">
-			      		<div class="col-md-12"><span id="film-list"></span></div>
+			      		<div class="col-md-12"><span id="vehicle-list"></span></div>
 			      	</div>
 			       
 			      </div>
@@ -128,15 +125,24 @@
 
 
 
-		 <footer class="footer">
-		    <div class="container">
-		    <div class="row">
-		    	<div class="text-muted col-md-12"><span>Built using the <a href="https://swapi.co/">SWAPI</a></span> <span class="foot-right">Star Wars is ™ and &copy Disney 2013</span></div>
-		    	<div class="text-muted col-md-6"></div>
-		    </div>
-		    </div>
-		    
-		  </footer>
+		<footer class="footer">
+			<div class="container" id="foot-container">
+			    <div class="row">
+			    	<div class="text-muted col-md-4">
+			    		Built using the <a target="_blank" href="https://swapi.co/">SWAPI</a>
+			    	</div>
+			    	<div class="text-muted col-md-4">
+			    		StarQuery <a target="_blank" href="https://github.com/jodiegardiner/swapi-project">Github</a>
+			    	</div>
+			    	<div class="text-muted col-md-4">
+			    		Star Wars is ™ and &copy; Disney 2013
+			    	</div>
+
+			    	</div>
+			    	
+			    </div>
+			
+		</footer>
 	</div>
 
 <!-- 
