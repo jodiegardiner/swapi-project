@@ -7,7 +7,8 @@
 	<title>Star Wars Database</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/theme.css">
 	<link rel="stylesheet" href="css/my_css.css">
 	<style></style>
 
@@ -15,134 +16,46 @@
 <body>
 
 
-	<div class="container">
+	<div class="container" id="main-container">
 		
 		<div class="row">
-			<h1 class="text-center header">STAR WARS</h1>
-			<h3 class="text-center header"> Search a galaxy far, far away</h3>
-		</div>
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- 	
-		<div class="row">
-			<form class="navbar-form">
-        	<div class="form-group" style="display:inline;">
-          		<div class="input-group">
-            		<input type="text" class="form-control" id="searchQuery" value="">
-            		<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-          		</div>
-       		 </div>
-      		</form>
-      	<div>
-      		<table class="table">
-      		<thead>
-      		<th>People</th>
-      		<th>Gender</th>
-      		<th>Hair colour</th>
-      		<th>Eye colour</th>
-      		<th>Skin colour</th>
-      		<tbody id="search-results">
-      		</tbody>
-      		</table>
-      	</div>
-      	</div>
-      	<hr> -->
-
-<!-- Modal -->
-		<!-- 	<div class="modal fade" id="beer_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-			      </div>
-			      <div class="modal-body" id=descTest>
-			       <table>
-			       <tbody>
-			       </tbody>
-			       </table>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Thanks!</button>
-			        
-			      </div>
-			    </div>
-			  </div>
+			<div class="col-md-12">
+				<a href="index.html"><span class="fa fa-rebel fa-4x"></span><span class=" header main-header"><strong>&nbsp;Star query&nbsp;</strong></span><span class="fa fa-first-order fa-4x"></span></a>
 			</div>
 
-		<div class="row">
-			<div id="gallery"></div>
-		</div> -->
-
+			<div class="col-md-4">
+			
+			</div>
+		</div>
+	
+		 
 	</div>
+
+	<div class="container" id="btn-container">
+		<div class="row">
+			<div class="col-md-4 img-store img-store1"><a href="people.html"><img class="img-rounded img-responsive" src="img/chars_text.jpg"></a></div>
+			<div class="col-md-4 img-store img-store2"><img class="img-rounded img-responsive" src="img/veh_text.jpg"></div>
+			<div class="col-md-4 img-store img-store3"><img class="img-rounded img-responsive" src="img/ships_text.jpg"></div>
+
+		</div>
+	</div>
+	<footer class="footer">
+		    <div class="container" id="foot-container">
+		    <div class="row">
+		    	<div class="text-muted col-md-12"><span>Built using the <a href="https://swapi.co/">SWAPI</a></span>. <span class="foot-right">Star Wars is ™ and &copy Disney 2013</span></div>
+		    	<div class="text-muted col-md-6"></div>
+		    </div>
+		    </div>
+		  </footer>
 
 <!-- 
 
 	..........End Content......
 
-	-->
+-->
+
 	<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-	<script src="js/my_script.js"></script>
-
-		
-		
-
-
-
-
-		<!-- // $("#gallery").on('click', "img", function(event) {
-
-			
-		// 	var beerID = $(this).attr("value");
-		// 	var urlBeerMore = "https://quiet-inlet-67115.herokuapp.com/api/beer/"+ beerID;
-		// 	console.log(beerID);
-
-		// 	$.ajax({
-		// 		url: urlBeerMore,
-		// 		dataType: 'json',
-		// 	})
-
-		// 	.success(function( descBeer ) {
-		// 		var contentSelect = "";
-
-		// 		// console.log(descBeer);
-		// 		// console.log(elem.description);
-		// 		var bestEnjoyed = descBeer.available ? descBeer.available.name : "No info"
-
-		// 		contentSelect = '<tr value="' + descBeer.id + '"><td>'+descBeer.description+'</td><td>'+descBeer.abv+'</td><td>'+bestEnjoyed+'</td></tr>';
-		// 		$("#descTest tbody").html( contentSelect );
-		// 		$("table").removeClass("hid");
-		// 		$("#beer_modal").modal('show');
-				
-		// 		console.log(descBeer);
-		// 	});
-
-		// }); -->
-
-
-	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/my_script.js"></script>
 </body>
 </html>
