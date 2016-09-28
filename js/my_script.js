@@ -63,14 +63,14 @@ $("#search-results").on('click', "tr", function(event){
 			genderIcon=""			
 		};
 		
-
+// Generate html for modal
 		$("#peopleModalLabel").html(personDetail.name);
-		$("#peopleHeight").html(personDetail.height);
-		$("#peopleWeight").html(personDetail.mass);
-		$("#peopleHair").html(personDetail.hair_color);
-		$("#peopleEyes").html(personDetail.eye_color).css("color", personDetail.eye_color);
+		$("#peopleHeight").html("<li class='list-group-item'>"+personDetail.height+"</li>");
+		$("#peopleWeight").html("<li class='list-group-item'>"+personDetail.mass+"</li>");
+		$("#peopleHair").html("<li class='list-group-item'>"+personDetail.hair_color+"</li>");
+		$("#peopleEyes").html("<li class='list-group-item'>"+personDetail.eye_color+"</li>").css("color", personDetail.eye_color);
 		$("#genderIco").html("     "+genderIcon);
-		$("#peopleYear").html(personDetail.birth_year);
+		$("#peopleYear").html("<li class='list-group-item'>"+personDetail.birth_year+"</li>");
 
 
 		$.ajax({
@@ -79,7 +79,7 @@ $("#search-results").on('click', "tr", function(event){
 		})
 
 		.success(function( homeWorld) {
-			$("#peopleWorld").html(homeWorld.name)
+			$("#peopleWorld").html("<li class='list-group-item'>"+homeWorld.name+"</li>")
 		})
 
 		
@@ -121,7 +121,15 @@ $("#search-results").on('click', "tr", function(event){
 
 		})
 
+		var speciesName=personDetail.species
+		$.ajax({
+			url: speciesName,
+			dataType: 'json',
+		})
 
+		.success(function( species) {
+			$("#peopleSpecies").html("<li class='list-group-item'>"+species.name+"</li>")
+		})
 
 		var appearsIn="";
 		for (var i=0; i<personDetail.films.length; i++) {
@@ -212,3 +220,28 @@ $("#search-vehicle").on('keyup', function(event) {
 	});
 })
 
+// Return specific vehicle and generate html for modal
+
+$("#vehicle-results").on('click', "tr", function(event){
+
+	// empty out old data on every fresh click
+	$("#ship-list").html("");
+	$("#veh-list").html("");
+
+	var urlID = $(this).attr('id');
+
+	$.ajax({
+		url: urlID,
+		dataType: 'json',
+
+	})
+
+	.success(function( vehicleDetail ) {
+		$("#vehicleModalLabel").html(vehicleDetail.name);
+		$("#vehicleMaker").html("<li class='list-group-item'>"+vehicleDetail.manufacturer+"</li>");
+		$("#vehicleCrew").html("<li class='list-group-item'>"+vehicleDetail.crew+"</li>");
+		$("#vehiclePass").html("<li class='list-group-item'>"+vehicleDetail.passengers+"</li>");
+
+		console.log(vehicleDetail);
+		})
+})

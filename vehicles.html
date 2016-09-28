@@ -64,50 +64,67 @@
       </div>
 
 
-<!-- Button trigger modal -->
-			<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sw_modal">
-  				Launch demo modal
-			</button> -->
 <!-- Modal -->
 		
-			<div class="modal fade" id="veh_modal" tabindex="-1" role="dialog" aria-labelledby="peopleModalLabel">
+			<div class="modal fade" id="veh_modal" tabindex="-1" role="dialog" aria-labelledby="vehicleModalLabel">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h1 class="modal-title" id="peopleModalLabel"></h1><span id="genderIco"></span>
+			        <strong><h1 class="modal-title" id="vehicleModalLabel"></h1></strong><span id="genderIco"></span>
 			      </div>
-			      <div class="modal-body" id=peopleBody>
-			      	<div class="row">
-			      		<div class="col-md-3"><strong>Height</strong> <span id="peopleHeight"></span>cm</div>
-			      		<div class="col-md-3"><strong>Weight</strong> <span id="peopleWeight"></span>kg</div>
-			      		<div class="col-md-3"><strong>Hair</strong> <span id="peopleHair"></span></div>
-			      		<div class="col-md-3"><strong>Eyes</strong> <span id="peopleEyes"></span></div>
+			      
+			      <div class="modal-body" id=vehicleBody>
+			      	<div class="row modal-layout">
+			      		<div class="col-md-12 "><strong>Manufacturer</strong>
+			      			<ul class="list-group" id="vehicleMaker"></ul></div>
+			      		</div>
+			      	<div class="row modal-layout">
+			      		<div class="col-md-3 "><strong>Crew</strong> <ul class="list-group" id="vehicleCrew"></ul></div>
+			      		<div class="col-md-3"><strong>Passengers</strong> <ul class="list-group" id="vehiclePass"></ul></div>
+			      		<div class="col-md-3"><strong>Hair</strong> <ul class="list-group" id="vehicleHair"></ul></div>
+			      		<div class="col-md-3"><strong>Eyes</strong> <ul class="list-group" id="vehicleEyes"></ul></div>
 			      	</div>
-			      	<hr>
-			      	<div class="row">
-			      		<div class="col-md-12"><strong>Homeworld</strong> <span id="peopleWorld"></span></div>
+			      	
+			      	<div class="row modal-layout">
+			      		<div class="col-md-6"><strong>Homeworld</strong> <ul class="list-group" id="vehicleWorld"></ul></div>
+			      		<div class="col-md-6"><strong>Birth Year</strong> <ul class="list-group" id="vehicleYear"></ul></div>
 			      	</div>
-			      	<hr>
-			      	<div class="row">
-			      		<div class="col-md-6"><strong>Starships used</strong>: <span id="ship-list"></span></div>
-			      		<div class="col-md-6"><strong>Vehicles used</strong>: <span id="veh-list"></span></div>
+			      	
+			      	<div class="row modal-layout">
+			      		<div class="col-md-6">&nbsp;<span"><strong>&nbsp;Starships used&nbsp;</strong></span>
+			      			<ul class="list-group" id="ship-list">
+			      		 	
+			      		 	</ul>
+			      		</div>
+
+
+			      		<div class="col-md-6">&nbsp;<span class=""><strong>&nbsp;Vehicles used&nbsp;</strong></span>
+							<ul class="list-group" id="veh-list">
+								
+							</ul>
+			      		</div>
 			      		
 			      	</div>
-			      	<hr>
-			      	<div class="row">
-			      		<div class="col-md-12"><strong>Appears in</strong>:</div>
+			      	
+			      	<div class="row modal-layout ">
+			      		<div class="col-md-12"><strong>Appears in</strong></div>
+			      	</div>
+			      	<div class="row modal-layout appears">
+			      		<div class="col-md-12"><span id="film-list"></span></div>
 			      	</div>
 			       
 			      </div>
 
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">click to dismiss</button>
+			        <button type="button" class="btn btn-default" data-dismiss="modal">back</button>
 			        
 			      </div>
 			    </div>
 			  </div>
 			</div>
+
+<!-- 			End Modal -->
 
 
 

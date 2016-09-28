@@ -23,29 +23,23 @@
 			<div class="col-md-12">
 				<a href="index.html"><span class="fa fa-rebel fa-4x"></span><span class=" header main-header"><strong>&nbsp;Star query&nbsp;</strong></span><span class="fa fa-first-order fa-4x"></span></a>
 			</div>
-
-			<div class="col-md-4">
-			
-			</div>
 		</div>
 		
 		<div class="container ctn">
-		<div class="row">
-			<h1 class="header "><strong>People Search</strong></h1>
+			<div class="row">
+				<h1 class="header "><strong>People Search</strong></h1>
 			</div>
-</div>
+		</div>
       	<div class="row">
-		<div class="col-md-12">
-		  
-		  <div class="form-group">
-		    
-		      <input type="text" class="form-control" placeholder="Find people" name="srch-term" id="searchQuery">
-		      <span class=" header sub-header"><p> <strong>Search a galaxy far, far away</strong></p></span>
+			<div class="col-md-12">
+		 		<div class="form-group">
+		      		<input type="text" class="form-control" placeholder="Find people" name="srch-term" id="searchQuery"><span class=" header sub-header"><p> <strong>Search a galaxy far, far away</strong></p></span>
 		      
-		    </div>
-		  </div> 
+		    	</div>
+		  	</div> 
 		</div>
 		
+<!-- Search results -->
 
       		<div>
 	      		<table class="table hidden">
@@ -59,16 +53,13 @@
 	      		</tbody>
 	      		</table>
       		</div>
-      		</div>
-      	</div>
+  </div>
+      	
 
-      </div>
+      
 
 
-<!-- Button trigger modal -->
-			<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sw_modal">
-  				Launch demo modal
-			</button> -->
+
 <!-- Modal -->
 		
 			<div class="modal fade" id="sw_modal" tabindex="-1" role="dialog" aria-labelledby="peopleModalLabel">
@@ -76,30 +67,35 @@
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h1 class="modal-title" id="peopleModalLabel"></h1><span id="genderIco"></span>
+			        <strong><h1 class="modal-title" id="peopleModalLabel"></h1></strong><span id="genderIco"></span>
 			      </div>
+			      
 			      <div class="modal-body" id=peopleBody>
 			      	<div class="row modal-layout">
-			      		<div class="col-md-3 "><strong>Height</strong> <span id="peopleHeight"></span>cm</div>
-			      		<div class="col-md-3"><strong>Weight</strong> <span id="peopleWeight"></span>kg</div>
-			      		<div class="col-md-3"><strong>Hair</strong> <span id="peopleHair"></span></div>
-			      		<div class="col-md-3"><strong>Eyes</strong> <span id="peopleEyes"></span></div>
+			      		<div class="col-md-12 "><strong>Species</strong>
+			      			<ul class="list-group" id="peopleSpecies"></ul></div>
+			      		</div>
+			      	<div class="row modal-layout">
+			      		<div class="col-md-3 "><strong>Height (cm)</strong> <ul class="list-group" id="peopleHeight"></ul></div>
+			      		<div class="col-md-3"><strong>Weight (kg)</strong> <ul class="list-group" id="peopleWeight"></ul></div>
+			      		<div class="col-md-3"><strong>Hair</strong> <ul class="list-group" id="peopleHair"></ul></div>
+			      		<div class="col-md-3"><strong>Eyes</strong> <ul class="list-group" id="peopleEyes"></ul></div>
 			      	</div>
 			      	
 			      	<div class="row modal-layout">
-			      		<div class="col-md-6"><strong>Homeworld</strong> <span id="peopleWorld"></span></div>
-			      		<div class="col-md-6"><strong>Birth Year</strong> <span id="peopleYear"></span></div>
+			      		<div class="col-md-6"><strong>Homeworld</strong> <ul class="list-group" id="peopleWorld"></ul></div>
+			      		<div class="col-md-6"><strong>Birth Year</strong> <ul class="list-group" id="peopleYear"></ul></div>
 			      	</div>
 			      	
 			      	<div class="row modal-layout">
-			      		<div class="col-md-6"><strong>Starships used</strong>
+			      		<div class="col-md-6">&nbsp;<span"><strong>&nbsp;Starships used&nbsp;</strong></span>
 			      			<ul class="list-group" id="ship-list">
 			      		 	
 			      		 	</ul>
 			      		</div>
 
 
-			      		<div class="col-md-6"><strong>Vehicles used</strong>
+			      		<div class="col-md-6">&nbsp;<span class=""><strong>&nbsp;Vehicles used&nbsp;</strong></span>
 							<ul class="list-group" id="veh-list">
 								
 							</ul>
@@ -123,6 +119,8 @@
 			    </div>
 			  </div>
 			</div>
+
+<!-- 			End Modal -->
 
 
 

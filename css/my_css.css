@@ -193,18 +193,16 @@
     		border-bottom-right-radius: 2px;
     		border-top-left-radius: 2px;
     		border-top-right-radius: 2px;
-    			/*background-image: url(../img/chars_text.jpg)*/
+    		
 		}
 
-		/*img:hover {
-			box-shadow: -10px -10px 5px #000000;
-		}*/
+		
 
 		.modal-layout {
 			border: 2px solid grey;
 			border-radius: : 20px
 			box-shadow: 5px 5px 10px #1C1E22;
-			padding: 5px;
+			/*padding-bottom: 5px;*/
 			margin-top: 5px;
 			margin-left: 10px
 			margin-right: 10px;
@@ -218,4 +216,14 @@
 			height:150px;
 			width:100px;
 			float: left;
+		}
+
+		.modal-label {
+			background: grey;
+			color:#ffffff;
+			/*background: #1C1E22;*/
+			margin-bottom: 0px;
+			border-bottom: 2px solid #32383E;
+			border-top-left-radius:  3px;
+			border-top-right-radius:  3px;
 		}
