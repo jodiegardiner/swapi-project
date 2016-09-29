@@ -1,0 +1,19 @@
+{
+  "name": "swapi-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodiegardiner/swapi-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodiegardiner/swapi-project/issues"
+  },
+  "homepage": "https://github.com/jodiegardiner/swapi-project#readme"
+}
