@@ -1,10 +1,10 @@
 // custom js for swapi-project stream 1
 
 // Search for People name using user input
-$("#searchQuery").on('keyup', function(event) {
+$(document).on('keyup', "#searchQuery", function(event) {
 
 	event.preventDefault();
-
+console.log("1111")
 	$(".hidden").removeClass("hidden");
 
 	var nameSearch = $("#searchQuery").val();
@@ -30,7 +30,7 @@ $("#searchQuery").on('keyup', function(event) {
 })
 
 // Return specific person, format for modal
-$("#search-results").on('click', "tr", function(event){
+$(document).on('click', "#search-results tr", function(event){
 
 	// empty out old data on every fresh click
 	$("#ship-list").html("");
@@ -164,26 +164,6 @@ $("#search-results").on('click', "tr", function(event){
 
 		$("#film-list").html(appearsIn);
 
-		// var filmList='';
-
-		// $.each(personDetail.films, function(i, filmData){
-					
-		// 		console.log(personDetail.films)
-		// 		$.ajax({
-		// 			url: filmData,
-		// 			dataType: 'json',
-		// 		})
-		// 		.success(function( filmName) {
-										
-		// 			filmList+= filmName.title+' ';
-		// 			console.log(filmList);
-		// 			$("#film-list").html(filmList);
-					
-		// 			})
-				
-
-		// })
-		
 
 	});
 })
@@ -192,7 +172,7 @@ $("#search-results").on('click', "tr", function(event){
 
 // Search for Vehicle name using user input
 
-$("#search-vehicle").on('keyup', function(event) {
+$(document).on('keyup', "#search-vehicle", function(event) {
 
 	event.preventDefault();
 
@@ -222,7 +202,7 @@ $("#search-vehicle").on('keyup', function(event) {
 
 // Return specific vehicle and generate html for modal
 
-$("#vehicle-results").on('click', "tr", function(event){
+$(document).on('click', "#vehicle-results tr", function(event){
 
 	// empty out old data on every fresh click
 	$("#ship-list").html("");
@@ -288,7 +268,7 @@ $("#vehicle-results").on('click', "tr", function(event){
 
 // Search for Starship name using user input
 
-$("#search-ship").on('keyup', function(event) {
+$(document).on('keyup',"#search-ship", function(event) {
 
 	event.preventDefault();
 
@@ -317,7 +297,7 @@ $("#search-ship").on('keyup', function(event) {
 })
 
 // Return specific vehicle and generate html for modal
-$("#ship-results").on('click', "tr", function(event){
+$(document).on('click', "#ship-results tr", function(event){
 
 	// empty out old data on every fresh click
 	$("#ship-list").html("");
